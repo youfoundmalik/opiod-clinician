@@ -1,0 +1,15 @@
+.content {
+  display: grid;
+  margin: 0 auto;
+  padding: 70px 10px;
+  min-height: 30vh;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+@media screen and (min-width: 64em) {
+  .content {
+    min-height: 50vh !important;
+  }
+}
+

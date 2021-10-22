@@ -1,0 +1,38 @@
+.side-side__ {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15%;
+  align-items: flex-start;
+
+  img{
+    width: 100%;
+  }
+  .side-one{
+    justify-content: flex-end;
+  }
+
+  .side-two{
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .side-side__ {
+    width: 100% !important;
+    gap: 50px !important;
+    .side-one{
+      p{
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .side-side__ {
+    grid-template-columns: 1fr;
+    width: 80% !important;
+  }
+}

@@ -1,0 +1,31 @@
+.double-img__ {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15%;
+  align-items: flex-end;
+
+  img{
+    width: 100%;
+  }
+  .image-one{
+    justify-content: flex-end;
+  }
+
+  .image-two{
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .double-img__ {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .double-img__ {
+    width: 80% !important;
+  }
+}

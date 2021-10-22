@@ -1,9 +1,10 @@
-@import url("./font/proximasoft/stylesheet.css");
-body {
+*{
+  padding: 0;
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
+  font-family: "Proxima Soft", Arial, Helvetica, sans-serif;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Proxima Soft", Arial, Helvetica, sans-serif;
@@ -12,4 +13,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p {
+  font-weight: 500 !important;
+  font-size: 18px;
+  line-height: 25px;
+  color: #2E3338;
+}
+
+h1{
+  font-size: 45px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2% !important;
 }

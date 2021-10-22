@@ -1,4 +1,5 @@
 import React from "react";
+import './index.scss'
 import { Link as NavLink } from "react-scroll";
 
 const Nav = () => {
@@ -7,81 +8,81 @@ const Nav = () => {
       <div className="links">
         <NavLink
           to="welcome"
-          activeClassName="active"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          HOME
+          Home
         </NavLink>
         <NavLink
-          to="why"
-          activeClassName="active"
+          to="consideration"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          WHY
+          {window.screen.width > 850 ? "Considerations" : "Consider"}
         </NavLink>
         <NavLink
-          to="what"
-          activeClassName="active"
+          to="guidance"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          WHAT
+          Guidance
         </NavLink>
         <NavLink
-          to="who"
-          activeClassName="active"
+          to="talking"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          {window.screen.width > 480 ? "WHO CAN FILL THIS OUT" : "WHO"}
+          {window.screen.width > 850 ? "Talking with patients" : "Talking"}
         </NavLink>
         <NavLink
-          to="using"
-          activeClassName="active"
+          to="usage"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          {window.screen.width > 480 ? "USING THE TOOL" : "USING"}
+          {window.screen.width > 850 ? "Safe Usage" : "Usage"}
         </NavLink>
         <NavLink
-          to="results"
-          activeClassName="active"
+          to="storage"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          RESULTS
+          Storage
         </NavLink>
         <NavLink
-          to="credits"
+          to="links"
           id="last"
-          activeClassName="active"
+          activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-51}
         >
-          CREDITS
+          {window.screen.width > 850 ? "Useful Links" : "Links"}
         </NavLink>
       </div>
     </header>
