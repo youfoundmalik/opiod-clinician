@@ -9,28 +9,13 @@ import DoubleImg from "../components/doubleRoundImg/DoubleImg";
 import ParagraphBox from "../components/common/ParagraphBox";
 import SidebySide from "../components/sideByside/SideBySide";
 
-import illustration1 from "../images/illustrations/Clinician_Illustrations-01.svg";
-import illustration2 from "../images/illustrations/Clinician_Illustrations-02.png";
-import illustration3 from "../images/illustrations/Clinician_Illustrations-03.png";
-import illustration4 from "../images/illustrations/Clinician_Illustrations-04.svg";
-import illustration5 from "../images/illustrations/Clinician_Illustrations-05.png";
-import illustration6 from "../images/illustrations/Clinician_Illustrations-06.png";
-import illustration7 from "../images/illustrations/Clinician_Illustrations-07.svg";
-import illustration8 from "../images/illustrations/Clinician_Illustrations-08.svg";
-import illustration9 from "../images/illustrations/Clinician_Illustrations-09.png";
-import illustration10 from "../images/illustrations/Clinician_Illustrations-10.svg";
-
-import Arche from "../images/logos/Arche.png";
-import UofA from "../images/logos/UofALogo.png";
-import Trekk from "../images/logos/Trekk.png";
-import AGBlack from "../images/logos/AGLogoBlack.png";
-import AHSWhite from "../images/logos/AHSWhite.png";
+import Graphics from "../images/Graphics";
 
 const Main = () => {
   const welcome = [
     {
       heading: "Opioids and Children’s Pain",
-      mainImg: `${illustration1}`,
+      mainImg: `${Graphics.svg[0]}`,
       imgWidth: "95%",
       maxwidth: "50%",
     },
@@ -58,14 +43,14 @@ const Main = () => {
     },
     {
       maxwidth: "80%",
-      imageOne: `${illustration2}`,
-      imageTwo: `${illustration3}`,
+      imageOne: `${Graphics.svg[1]}`,
+      imageTwo: `${Graphics.svg[2]}`,
     },
   ];
   const potentialRisk = [
     {
       heading: "Potential Risks",
-      mainImg: `${illustration4}`,
+      mainImg: `${Graphics.svg[3]}`,
       imgWidth: "80%",
       maxwidth: "55%",
       justify: "center",
@@ -81,8 +66,8 @@ const Main = () => {
     { heading: "Prescribing Guidance for Children and Youth" },
     {
       maxwidth: "50%",
-      imageOne: `${illustration5}`,
-      imageTwo: `${illustration6}`,
+      imageOne: `${Graphics.svg[4]}`,
+      imageTwo: `${Graphics.svg[5]}`,
     },
     {
       heading: "Health Canada recommends",
@@ -99,7 +84,7 @@ const Main = () => {
   const talking = [
     {
       heading: "Talking with Patients and Families",
-      mainImg: `${illustration7}`,
+      mainImg: `${Graphics.svg[6]}`,
       imgWidth: "85%",
       maxwidth: "80%",
       justify: "center",
@@ -120,7 +105,7 @@ const Main = () => {
     },
     {
       maxwidth: "100%",
-      imageTwo: `${illustration8}`,
+      imageTwo: `${Graphics.svg[7]}`,
     },
     {
       size: "auto",
@@ -131,7 +116,7 @@ const Main = () => {
   const usage = [
     {
       heading: "Minimizing the Risks",
-      mainImg: `${illustration9}`,
+      mainImg: `${Graphics.svg[8]}`,
       imgWidth: "95%",
       maxwidth: "60%",
     },
@@ -151,7 +136,7 @@ const Main = () => {
   ];
   const storage = [
     { heading: "Discussing Safe Storage and Return" },
-    { maxwidth: "50%", imageTwo: `${illustration10}` },
+    { maxwidth: "50%", imageTwo: `${Graphics.svg[9]}` },
     {
       heading: "A discussion on safe storage should include:",
       list1:
@@ -185,17 +170,17 @@ const Main = () => {
     },
     {
       maxwidth: "80%",
-      imageOne: `${Arche}`,
+      imageOne: `${Graphics.png[0]}`,
       linkOne:
         "https://www.ualberta.ca/pediatrics/pediatric-research/affiliated-research-units/alberta-research-centre-for-health-evidence-arche/index.html",
-      imageTwo: `${UofA}`,
+      imageTwo: `${Graphics.png[1]}`,
       linkTwo: "https://www.ualberta.ca/research/our-research/index.html",
     },
     {
       maxwidth: "80%",
-      imageOne: `${Trekk}`,
+      imageOne: `${Graphics.png[2]}`,
       linkOne: "Trekk Logo: https://trekk.ca/",
-      imageTwo: `${AGBlack}`,
+      imageTwo: `${Graphics.png[3]}`,
       linkTwo: "https://www.antigravitydesignco.com/",
     },
     {
@@ -330,7 +315,7 @@ const Main = () => {
                 target="_blank"
                 href="https://www.albertahealthservices.ca/scns/page9682.aspx"
               >
-                <img src={AHSWhite} alt="graphic" />
+                <img src={Graphics.png[4]} alt="graphic" />
               </a>
             </InnerDiv>
           </div>

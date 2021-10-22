@@ -222,6 +222,15 @@
       }
     }
   }
+  #links {
+    .yellow-background {
+      background-color: $mainColor;
+      width: 100%;
+      font-weight: 600 !important;
+      padding: 1% 10% !important;
+      border-radius: 50px;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
