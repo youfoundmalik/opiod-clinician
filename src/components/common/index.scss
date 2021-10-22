@@ -1,0 +1,51 @@
+@import "../../style.scss";
+
+h1 {
+  font-size: 45px !important;
+}
+p,
+li {
+  text-align: left;
+  font-size: 18px;
+}
+li {
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.paragraph-box {
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 40px !important;
+  }
+  p,
+  li {
+    text-align: center;
+  }
+  .paragraph-box {
+    width: 80% !important;
+    margin: 0;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px !important;
+  }
+  p,
+  li {
+    font-size: 16px;
+  }
+  .paragraph-box {
+    width: 90% !important;
+    padding: 5% 5% !important;
+    border-radius: 10px;
+  }
+}

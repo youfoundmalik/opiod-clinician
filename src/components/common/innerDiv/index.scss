@@ -1,0 +1,20 @@
+.inner-div_ {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 850px) {
+  .inner-div_ {
+    width: auto !important;
+    max-width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .inner-div_ {
+    max-width: 90% !important;
+  }
+}

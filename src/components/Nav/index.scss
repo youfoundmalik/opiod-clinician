@@ -1,0 +1,66 @@
+@import "../../style.scss";
+
+.navigation__ {
+  height: 50px;
+  background-color: $darkBackground;
+  align-items: center;
+  display: grid;
+  position: fixed;
+  width: 100%;
+
+  .links {
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+
+    #last {
+      border-right: 0px !important;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      border-right: 1px solid white;
+      padding: 0px 10px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: 300;
+      cursor: pointer;
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .navigation__ {
+    .links {
+      overflow: hidden;
+      justify-content: center;
+
+      a {
+        padding: 0px 20px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .navigation__ {
+    .links {
+      overflow: hidden;
+      justify-content: center;
+
+      a {
+        padding: 0px 20px;
+        font-size: 20px;
+      }
+    }
+  }
+}
