@@ -20,13 +20,19 @@ import illustration8 from "../images/illustrations/Clinician_Illustrations-08.sv
 import illustration9 from "../images/illustrations/Clinician_Illustrations-09.png";
 import illustration10 from "../images/illustrations/Clinician_Illustrations-10.svg";
 
+import Arche from "../images/logos/Arche.png";
+import UofA from "../images/logos/UofALogo.png";
+import Trekk from "../images/logos/Trekk.png";
+import AGBlack from "../images/logos/AGLogoBlack.png";
+import AHSWhite from "../images/logos/AHSWhite.png";
+
 const Main = () => {
   const welcome = [
     {
       heading: "Opioids and Children’s Pain",
       mainImg: `${illustration1}`,
       imgWidth: "95%",
-      maxwidth: "60%",
+      maxwidth: "50%",
     },
     {
       message:
@@ -61,7 +67,7 @@ const Main = () => {
       heading: "Potential Risks",
       mainImg: `${illustration4}`,
       imgWidth: "80%",
-      maxwidth: "60%",
+      maxwidth: "55%",
       justify: "center",
     },
     {
@@ -153,6 +159,51 @@ const Main = () => {
       list2: "Safe return of remaining opioids to pharmacies",
     },
   ];
+  const footer = [
+    {
+      heading: "Useful Links",
+      subheading: "Find out more about opioids from these helpful resources:",
+    },
+    {
+      text1: "ARCHE Systematic Review",
+      link2:
+        "https://trekk.ca/resources?utf8=%E2%9C%93&tag_id=D010147&external_resource_type=Quick_glance",
+      text2: "TREKK Bottom Line Recommendations",
+      link3:
+        "https://www.google.com/url?q=https://www.canada.ca/en/health-canada/services/opioids.html&sa=D&source=docs&ust=1634759298037000&usg=AOvVaw37bkCsZ5xgKUmM5wV4drUb",
+      text3: "Health Canada",
+    },
+    {
+      size: "auto",
+      spacing: "3% 16%",
+      background: "#F2F2F2",
+    },
+    {
+      message1:
+        "PRODUCTION OF THIS MATERIAL WAS LED BY DR. MICHELE DYSON WITH ASSISTANCE FROM KELSEY WRIGHT AND ZAHRA SAIDHERSI",
+      message2: "THIS MATERIAL WAS DEVELOPED WITH SUPPORT FROM:",
+    },
+    {
+      maxwidth: "80%",
+      imageOne: `${Arche}`,
+      linkOne:
+        "https://www.ualberta.ca/pediatrics/pediatric-research/affiliated-research-units/alberta-research-centre-for-health-evidence-arche/index.html",
+      imageTwo: `${UofA}`,
+      linkTwo: "https://www.ualberta.ca/research/our-research/index.html",
+    },
+    {
+      maxwidth: "80%",
+      imageOne: `${Trekk}`,
+      linkOne: "Trekk Logo: https://trekk.ca/",
+      imageTwo: `${AGBlack}`,
+      linkTwo: "https://www.antigravitydesignco.com/",
+    },
+    {
+      size: "100%",
+      spacing: "5% 0",
+      background: "#F2F2F2",
+    },
+  ];
 
   return (
     <>
@@ -233,8 +284,67 @@ const Main = () => {
           />
         </Section>
         <Section id="links">
-          <ThreeInOne {...welcome} />
+          <InnerDiv>
+            <Heading>{footer[0].heading}</Heading>
+            <p>{footer[0].subheading}</p>
+          </InnerDiv>
+          <InnerDiv maxwidth="28%">
+            <p className="yellow-background">{footer[1].text1}</p>
+            <p className="yellow-background">
+              <a target="_blank" href={footer[1].link2}>
+                {footer[1].text2}
+              </a>
+            </p>
+            <p className="yellow-background">
+              <a target="_blank" href={footer[1].link3}>
+                {footer[1].text3}
+              </a>
+            </p>
+          </InnerDiv>
+          <InnerDiv maxwidth="50%">
+            <ParagraphBox {...footer[2]}>
+              <p>{footer[3].message1}</p>
+            </ParagraphBox>
+            <DoubleImg {...footer[4]} />
+            <ParagraphBox {...footer[6]}>
+              <p>{footer[3].message2}</p>
+            </ParagraphBox>
+            <DoubleImg {...footer[5]} />
+          </InnerDiv>
+          <div className="sectionTwo">
+            <InnerDiv maxwidth="50%">
+              <p className="link">
+                Please feel free to distribute this infographic to your
+                networks. Modifications of this work may not represent findings
+                from this review. For any questions about modifications of this
+                material, please contact{" "}
+                <a href="mailto:mdyson@ualberta.ca">mdyson@ualberta.ca.</a>
+              </p>
+              <p>
+                This infographic and the associated review were supported by the
+                Emergency Strategic Clinical Network (ESCN) and the Maternal
+                Newborn Child & Youth Strategic Clinical Network (MNCY) through
+                Alberta Health Services.
+              </p>
+              <a
+                target="_blank"
+                href="https://www.albertahealthservices.ca/scns/page9682.aspx"
+              >
+                <img src={AHSWhite} alt="graphic" />
+              </a>
+            </InnerDiv>
+          </div>
         </Section>
+        <section className="footer">
+          <InnerDiv maxwidth="68%">
+            <p>
+              Ahrari, M, Ail, S, Hartling L, Dong K, Drendel AL, Klassen TP,
+              Schreiner K, Dyson MP. Nonmedical opioid use following short-term
+              therapeutic exposure in children: a systematic review. Pediatrics
+              [accepted].
+            </p>
+          </InnerDiv>
+        </section>
       </div>
     </>
   );

@@ -1,14 +1,18 @@
 import React from "react";
 import "./index.scss";
 
-const DoubleImg = ({ maxwidth, imageOne, imageTwo }) => {
+const DoubleImg = ({ maxwidth, imageOne, imageTwo, linkOne, linkTwo }) => {
   return (
     <div className="double-img__" style={{ width: `${maxwidth}` }}>
       <div className="image-one">
-        <img src={imageOne} alt="graphic" />
+        <a target="_blank" href={linkOne}>
+          <img src={imageOne} alt="graphic" />
+        </a>
       </div>
       <div className="image-two">
-        <img src={imageTwo} alt="graphic" />
+        <a target="_blank" href={linkTwo}>
+          <img src={imageTwo} alt="graphic" />
+        </a>
       </div>
     </div>
   );
