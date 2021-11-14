@@ -47,7 +47,7 @@ const Main = () => {
     },
     {
       message:
-        "Clinicians worry about the long-term effects of opioid use in children and youth. Asystematic review led by researchers at the University of Alberta shows that it is still unclear whether short-duration (≤2 weeks) therapeutic opioid use in children results in increased risk of non-medical use in the future. Some research indicates that exposure to therapeutic opioids at some point in a child's lifetime may be associated with non-medical opioid use.",
+        "Clinicians worry about the long-term effects of opioid use in children and youth. A systematic review led by researchers at the University of Alberta shows that it is still unclear whether short-duration (≤2 weeks) therapeutic opioid use in children results in increased risk of non-medical use in the future. Some research indicates that exposure to therapeutic opioids at some point in a child's lifetime may be associated with non-medical opioid use.",
       other:
         "Other factors that may increase or decrease the risk of future harm are also unclear.",
     },
@@ -92,7 +92,7 @@ const Main = () => {
         "The importance of taking the appropriate dose and following the medication schedule",
       list2: "When to seek reassessment for under-treated pain",
       list3:
-        "The potential warning signs of inappropriate use, suchas using opioids to help with their mood or to reduce anxiety, or taking more than prescribed",
+        "The potential warning signs of inappropriate use, such as using opioids to help with their mood or to reduce anxiety, or taking more than prescribed",
     },
   ];
   const storage = [
@@ -118,6 +118,9 @@ const Main = () => {
       link3:
         "https://www.google.com/url?q=https://www.canada.ca/en/health-canada/services/opioids.html&sa=D&source=docs&ust=1634759298037000&usg=AOvVaw37bkCsZ5xgKUmM5wV4drUb",
       text3: "Health Canada",
+      link4:
+        "https://www.canada.ca/en/health-canada/services/safe-disposal-prescription-drugs.html",
+      text4: "Safe Disposal Information",
     },
     {
       size: "auto",
@@ -250,6 +253,11 @@ const Main = () => {
                 {footer[1].text3}
               </a>
             </p>
+            <p className="yellow-background">
+              <a target="_blank" rel="noreferrer" href={footer[1].link4}>
+                {footer[1].text4}
+              </a>
+            </p>
           </InnerDiv>
           <InnerDiv altclass="inner-box">
             <ParagraphBox {...footer[2]}>
@@ -288,7 +296,7 @@ const Main = () => {
         <section className="footer">
           <InnerDiv altclass="copyright">
             <p>
-              Ahrari, M, Ail, S, Hartling L, Dong K, Drendel AL, Klassen TP,
+              Ahrari M, Ali S, Hartling L, Dong K, Drendel AL, Klassen TP,
               Schreiner K, Dyson MP. Nonmedical opioid use following short-term
               therapeutic exposure in children: a systematic review. Pediatrics
               [accepted].
