@@ -1,15 +1,20 @@
 .content {
   display: grid;
   margin: 0 auto;
-  padding: 70px 10px;
+  padding: 70px 0px 50px;
   min-height: 30vh;
   align-items: flex-start;
   gap: 50px;
 }
+.content:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
 
 @media screen and (min-width: 64em) {
   .content {
-    min-height: 50vh !important;
+    min-height: 50vh ;
     padding: 70px 0px;
   }
 }

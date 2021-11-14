@@ -12,18 +12,12 @@ import SidebySide from "../components/sideByside/SideBySide";
 import Graphics from "../images/Graphics";
 
 const Main = () => {
-  const welcome = [
-    {
-      heading: "Opioids and Children’s Pain",
-      mainImg: `${Graphics.svg[0]}`,
-      imgWidth: "95%",
-      maxwidth: "50%",
-    },
-    {
-      message:
-        "Opioids are one of many effective pain management tools for children with moderate to severe pain, but there is still uncertainty about the future harms from short-term prescribing. This is why healthcare providers need to prescribe responsibly.",
-    },
-  ];
+  const welcome = {
+    heading: "Opioids and Children’s Pain",
+    mainImg: `${Graphics.svg[0]}`,
+    message:
+      "Opioids are one of many effective pain management tools for children with moderate to severe pain, but there is still uncertainty about the future harms from short-term prescribing. This is why healthcare providers need to prescribe responsibly.",
+  };
 
   const consideration = [
     {
@@ -42,7 +36,6 @@ const Main = () => {
         "When opioids are required to treat moderate and severe pain, add them to non-opioid treatment and interventions.",
     },
     {
-      maxwidth: "80%",
       imageOne: `${Graphics.svg[1]}`,
       imageTwo: `${Graphics.svg[2]}`,
     },
@@ -51,13 +44,10 @@ const Main = () => {
     {
       heading: "Potential Risks",
       mainImg: `${Graphics.svg[3]}`,
-      imgWidth: "80%",
-      maxwidth: "55%",
-      justify: "center",
     },
     {
       message:
-        "Clinicians worry about the long-term eects of opioid use in children and youth. Asystematic review led by researchers at the University of Alberta shows that it is still unclear whether short-duration (≤2 weeks) therapeutic opioid use in children results in increased risk of non-medical use in the future. Some research indicates that exposure to therapeutic opioids at some point in a child's lifetime may be associated with non-medical opioid use.",
+        "Clinicians worry about the long-term effects of opioid use in children and youth. Asystematic review led by researchers at the University of Alberta shows that it is still unclear whether short-duration (≤2 weeks) therapeutic opioid use in children results in increased risk of non-medical use in the future. Some research indicates that exposure to therapeutic opioids at some point in a child's lifetime may be associated with non-medical opioid use.",
       other:
         "Other factors that may increase or decrease the risk of future harm are also unclear.",
     },
@@ -65,7 +55,6 @@ const Main = () => {
   const guidance = [
     { heading: "Prescribing Guidance for Children and Youth" },
     {
-      maxwidth: "50%",
       imageOne: `${Graphics.svg[4]}`,
       imageTwo: `${Graphics.svg[5]}`,
     },
@@ -75,24 +64,11 @@ const Main = () => {
       list2: "No codeine under 18",
       list3: "Limited tramadol under 18",
     },
-    {
-      size: "35%",
-      spacing: "2% 0",
-      background: "#F2F2F2",
-    },
   ];
   const talking = [
     {
       heading: "Talking with Patients and Families",
       mainImg: `${Graphics.svg[6]}`,
-      imgWidth: "85%",
-      maxwidth: "80%",
-      justify: "center",
-    },
-    {
-      size: "auto",
-      spacing: "3% 15%",
-      background: "#FFF",
     },
     {
       message1:
@@ -102,28 +78,13 @@ const Main = () => {
       message3:
         "Be sure to use clear and concise messaging in these conversations. ",
       message4: "Here are 4 things to make sure your patients know:",
-    },
-    {
-      maxwidth: "100%",
       imageTwo: `${Graphics.svg[7]}`,
-    },
-    {
-      size: "auto",
-      spacing: "4% 15%",
-      background: "#FFF",
     },
   ];
   const usage = [
     {
       heading: "Minimizing the Risks",
       mainImg: `${Graphics.svg[8]}`,
-      imgWidth: "95%",
-      maxwidth: "60%",
-    },
-    {
-      size: "50%",
-      spacing: "2% 10%",
-      background: "#FFF",
     },
     {
       heading: "A discussion on safer usage should include:",
@@ -136,7 +97,7 @@ const Main = () => {
   ];
   const storage = [
     { heading: "Discussing Safe Storage and Return" },
-    { maxwidth: "50%", imageTwo: `${Graphics.svg[9]}` },
+    { imageTwo: `${Graphics.svg[9]}` },
     {
       heading: "A discussion on safe storage should include:",
       list1:
@@ -195,15 +156,19 @@ const Main = () => {
       <Nav />
       <div className="bodyArea">
         <Section id="welcome">
-          <ThreeInOne {...welcome[0]}>
-            <ParagraphBox>
-              <p>{welcome[1].message}</p>
+          <ThreeInOne
+            altclass="intro"
+            heading={welcome.heading}
+            mainImg={welcome.mainImg}
+          >
+            <ParagraphBox altclass="intro-box">
+              <p>{welcome.message}</p>
             </ParagraphBox>
           </ThreeInOne>
         </Section>
         <Section id="consideration">
           <Heading>{consideration[0].heading}</Heading>
-          <InnerDiv maxwidth="50%">
+          <InnerDiv altclass="consider">
             <p className="underline">{consideration[1].content}</p>
             <p className="underline">{consideration[2].content}</p>
             <p>{consideration[3].content}</p>
@@ -221,7 +186,7 @@ const Main = () => {
         <Section id="guidance">
           <Heading>{guidance[0].heading}</Heading>
           <DoubleImg {...guidance[1]} />
-          <ParagraphBox {...guidance[3]}>
+          <ParagraphBox altclass="box">
             <p>{guidance[2].heading}</p>
             <li>{guidance[2].list1}</li>
             <li>{guidance[2].list2}</li>
@@ -230,16 +195,16 @@ const Main = () => {
         </Section>
         <Section id="talking">
           <ThreeInOne {...talking[0]}>
-            <ParagraphBox {...talking[1]}>
-              <span>{talking[2].message1}</span>
-              <span>{talking[2].message2}</span>
-              <span>{talking[2].message3}</span>
+            <ParagraphBox>
+              <span>{talking[1].message1}</span>
+              <span>{talking[1].message2}</span>
+              <span>{talking[1].message3}</span>
             </ParagraphBox>
             <SidebySide
-              {...talking[3]}
+              imageTwo={talking[1].imageTwo}
               sideOne={
-                <ParagraphBox {...talking[4]}>
-                  <p>{talking[2].message4}</p>
+                <ParagraphBox>
+                  <p>{talking[1].message4}</p>
                 </ParagraphBox>
               }
             />
@@ -247,11 +212,11 @@ const Main = () => {
         </Section>
         <Section id="usage">
           <ThreeInOne {...usage[0]}>
-            <ParagraphBox {...usage[1]}>
-              <p>{usage[2].heading}</p>
-              <li>{usage[2].list1}</li>
-              <li>{usage[2].list2}</li>
-              <li>{usage[2].list3}</li>
+            <ParagraphBox altclass="box">
+              <p>{usage[1].heading}</p>
+              <li>{usage[1].list1}</li>
+              <li>{usage[1].list2}</li>
+              <li>{usage[1].list3}</li>
             </ParagraphBox>
           </ThreeInOne>
         </Section>
@@ -269,24 +234,24 @@ const Main = () => {
           />
         </Section>
         <Section id="links">
-          <InnerDiv>
+          <InnerDiv altclass="heading">
             <Heading>{footer[0].heading}</Heading>
             <p>{footer[0].subheading}</p>
           </InnerDiv>
-          <InnerDiv maxwidth="28%">
+          <InnerDiv altclass="yellow">
             <p className="yellow-background">{footer[1].text1}</p>
             <p className="yellow-background">
-              <a target="_blank" href={footer[1].link2}>
+              <a target="_blank" rel="noreferrer" href={footer[1].link2}>
                 {footer[1].text2}
               </a>
             </p>
             <p className="yellow-background">
-              <a target="_blank" href={footer[1].link3}>
+              <a target="_blank" rel="noreferrer" href={footer[1].link3}>
                 {footer[1].text3}
               </a>
             </p>
           </InnerDiv>
-          <InnerDiv maxwidth="50%">
+          <InnerDiv altclass="inner-box">
             <ParagraphBox {...footer[2]}>
               <p>{footer[3].message1}</p>
             </ParagraphBox>
@@ -297,7 +262,7 @@ const Main = () => {
             <DoubleImg {...footer[5]} />
           </InnerDiv>
           <div className="sectionTwo">
-            <InnerDiv maxwidth="50%">
+            <InnerDiv>
               <p className="link">
                 Please feel free to distribute this infographic to your
                 networks. Modifications of this work may not represent findings
@@ -312,7 +277,7 @@ const Main = () => {
                 Alberta Health Services.
               </p>
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://www.albertahealthservices.ca/scns/page9682.aspx"
               >
                 <img src={Graphics.png[4]} alt="graphic" />
@@ -321,7 +286,7 @@ const Main = () => {
           </div>
         </Section>
         <section className="footer">
-          <InnerDiv maxwidth="68%">
+          <InnerDiv altclass="copyright">
             <p>
               Ahrari, M, Ail, S, Hartling L, Dong K, Drendel AL, Klassen TP,
               Schreiner K, Dyson MP. Nonmedical opioid use following short-term

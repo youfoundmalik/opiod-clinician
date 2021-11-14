@@ -20,11 +20,11 @@
 
 @media screen and (max-width: 850px) {
   .side-side__ {
-    width: 100% !important;
-    gap: 50px !important;
+    width: 100% ;
+    gap: 50px ;
     .side-one{
       p{
-        text-align: left !important;
+        text-align: left ;
       }
     }
   }
@@ -33,6 +33,6 @@
 @media screen and (max-width: 450px) {
   .side-side__ {
     grid-template-columns: 1fr;
-    width: 80% !important;
+    width: 80% ;
   }
 }

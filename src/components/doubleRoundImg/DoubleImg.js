@@ -1,16 +1,16 @@
 import React from "react";
 import "./index.scss";
 
-const DoubleImg = ({ maxwidth, imageOne, imageTwo, linkOne, linkTwo }) => {
+const DoubleImg = ({ altclass, imageOne, imageTwo, linkOne, linkTwo }) => {
   return (
-    <div className="double-img__" style={{ width: `${maxwidth}` }}>
+    <div className={`double-img__ ${altclass}`}>
       <div className="image-one">
-        <a target="_blank" href={linkOne}>
+        <a target="_blank" rel="noreferrer" href={linkOne}>
           <img src={imageOne} alt="graphic" />
         </a>
       </div>
       <div className="image-two">
-        <a target="_blank" href={linkTwo}>
+        <a target="_blank" rel="noreferrer" href={linkTwo}>
           <img src={imageTwo} alt="graphic" />
         </a>
       </div>

@@ -8,13 +8,12 @@
 
 @media screen and (max-width: 850px) {
   .inner-div_ {
-    width: auto !important;
-    max-width: 80% !important;
+    width: 80% ;
   }
 }
 
 @media screen and (max-width: 450px) {
   .inner-div_ {
-    max-width: 90% !important;
+    width: 90% ;
   }
 }

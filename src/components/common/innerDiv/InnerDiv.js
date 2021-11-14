@@ -1,15 +1,8 @@
 import React from "react";
 import "./index.scss";
 
-const InnerDiv = ({ maxwidth, justify, children }) => {
-  return (
-    <div
-      className="inner-div_"
-      style={{ width: `${maxwidth}`, justifyItems: `${justify}` }}
-    >
-      {children}
-    </div>
-  );
+const InnerDiv = ({ children, altclass }) => {
+  return <div className={`inner-div_ ${altclass}`}>{children}</div>;
 };
 
 export default InnerDiv;

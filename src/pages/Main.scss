@@ -1,15 +1,35 @@
 @import "../style.scss";
 
+h1 {
+  margin-bottom: 0px !important;
+}
+p {
+  font-weight: 600 !important;
+  margin-bottom: 0px !important;
+}
+b {
+  font-weight: 800 !important;
+}
+
 .bodyArea {
   margin-top: 50px;
 
   #welcome {
+    padding-bottom: 0px;
     .three-in-one__ {
+      width: 90%;
+      justify-self: center;
       h1 {
         color: $mainColor;
       }
-      p {
-        font-weight: bold !important;
+      .inner-div_ {
+        gap: 0px;
+        p {
+          font-weight: bold !important;
+        }
+        .paragraph-box {
+          width: 100%;
+        }
       }
     }
   }
@@ -17,89 +37,139 @@
   #consideration {
     padding-bottom: 0px;
     border-top: 2px solid $altBAckground;
-    gap: 20px !important;
-    .inner-div_ {
-      justify-items: normal;
-    }
-    .double-img__ {
-      margin-bottom: 40px;
-    }
+    gap: 30px;
     h1 {
       color: $darkBackground;
+      width: 90%;
+      display: grid;
+      justify-self: center;
     }
-    p {
-      text-align: left;
-      padding-bottom: 25px;
-    }
-    .underline {
-      border-bottom: 1px solid $darkBackground;
+    .inner-div_ {
+      justify-items: normal;
+      width: 90%;
+      p {
+        text-align: left;
+      }
+      .underline {
+        border-bottom: 1px solid $darkBackground;
+        padding-bottom: 25px;
+      }
+      .double-img__ {
+        margin-bottom: 40px;
+        width: 90%;
+        gap: 30px;
+      }
     }
 
     .potential-risk {
+      margin-bottom: -30px;
+      display: grid;
       background-color: $altBAckground;
       padding: 70px 0;
-      .inner-div_ {
-        justify-items: center;
-      }
-      h1 {
-        color: $mainColor;
-      }
-      p {
-        font-weight: bold !important;
+      .three-in-one__ {
+        width: 100%;
+        justify-self: center;
+        h1 {
+          color: $mainColor;
+        }
+        .inner-div_ {
+          justify-items: center;
+          gap: 15px;
+          .paragraph-box {
+            p {
+              font-weight: bold !important;
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
 
   #guidance {
+    gap: 40px;
+    padding-bottom: 20px;
     h1 {
       color: $darkBackground;
+      width: 90%;
+      display: grid;
+      justify-self: center;
     }
-    p {
-      font-weight: bold !important;
-    }
-    li {
-      color: $darkBackground;
-      font-size: 17px;
+    .double-img__ {
+      width: 90%;
     }
     .paragraph-box {
+      width: 90%;
       gap: 5px;
+      background-color: $altBAckground;
+      padding: 5% 0;
+      p {
+        font-weight: bold !important;
+      }
+      li {
+        color: $darkBackground;
+        font-size: 17px;
+      }
     }
   }
 
   #talking {
     background-color: $altBAckground;
-    h1 {
-      color: $mainColor;
-    }
-    .paragraph-box {
-      gap: 20px;
-
-      span {
-        color: $darkBackground;
+    .three-in-one__ {
+      width: 90%;
+      justify-self: center;
+      h1 {
+        color: $mainColor;
       }
-    }
+      .inner-div_ {
+        width: 100%;
+        .paragraph-box {
+          width: 90%;
+          gap: 20px;
+          background-color: #fff;
 
-    .side-side__ {
-      gap: 5%;
-      .side-one {
-        margin-top: 150px;
+          span {
+            color: $darkBackground;
+          }
+        }
+        .side-side__ {
+          width: 100%;
+          gap: 5%;
+          .side-one {
+            margin-top: 20px;
+          }
+          .side-two {
+            width: 80%;
+            justify-self: center;
+          }
+        }
       }
     }
   }
 
   #usage {
-    h1 {
-      color: $darkBackground;
-    }
-    p {
-      font-weight: bold !important;
-    }
-    li {
-      color: $darkBackground;
-      font-size: 17px;
-    }
-    .paragraph-box {
-      gap: 5px;
+    padding-bottom: 20px;
+    .three-in-one__ {
+      width: 90%;
+      justify-self: center;
+      h1 {
+        color: $darkBackground;
+      }
+      .inner-div_ {
+        width: 100%;
+        .paragraph-box {
+          width: 95%;
+          gap: 15px;
+          p {
+            font-weight: bold !important;
+          }
+          li {
+            color: $darkBackground;
+            font-size: 17px;
+            text-align: left;
+          }
+        }
+      }
     }
   }
 
@@ -107,157 +177,394 @@
     background-color: $secondColor;
     h1 {
       color: #fff;
-    }
-    p {
-      font-weight: bold !important;
-      color: #fff;
-    }
-    li {
-      color: #fff;
-      font-size: 17px;
-    }
-    .paragraph-box {
-      gap: 5px;
+      width: 90%;
+      display: grid;
+      justify-self: center;
     }
     .side-side__ {
-      grid-template-columns: 1fr 2fr;
-      gap: 10%;
+      width: 90%;
+      grid-template-columns: 1fr;
+      gap: 5%;
       align-items: flex-start;
-      .side-one {
-        grid-column: 2;
-        margin-top: 30px;
-      }
-      .side-two {
-        grid-row: 1;
-        grid-column: 1;
-      }
-    }
-  }
-
-  #links {
-    padding-bottom: 0px;
-    h1 {
-      color: $mainColor;
-    }
-    p {
-      text-align: center;
-    }
-    .yellow-background {
-      background-color: $mainColor;
-      width: 100%;
-      font-weight: 600 !important;
-      padding: 1% 0;
-      border-radius: 50px;
-      a {
-        text-decoration: none;
-        color: $darkBackground;
-      }
-    }
-    .double-img__ {
-      align-items: center;
-    }
-
-    .sectionTwo {
-      background-color: $secondColor;
-      padding: 50px 0;
-      p {
-        font-weight: bold !important;
-        color: #fff;
-      }
-      .link {
-        font-weight: 400 !important;
-        color: rgba(255, 255, 255, 0.945);
-        a {
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-        }
-      }
-      a {
-        width: 30%;
-      }
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .footer {
-    padding: 30px;
-    background-color: $altBAckground;
-    p {
-      text-align: center;
-      font-style: italic;
-      font-weight: 400 !important;
-    }
-  }
-}
-
-@media screen and (max-width: 850px) {
-  #talking {
-    background-color: $altBAckground;
-    .side-side__ {
-      .side-one {
-        margin-top: 30px !important;
-      }
-    }
-  }
-  #storage {
-    .side-side__ {
-      width: 80% !important;
-      gap: 10%;
-      align-items: flex-start;
-      .side-one {
-        margin-top: 0px !important;
-        .paragraph-box {
-          width: 100% !important;
-
-          li {
-            text-align: left;
-          }
-        }
-      }
-      .side-two {
-        grid-row: 1;
-        grid-column: 1;
-      }
-    }
-  }
-  #links {
-    .yellow-background {
-      background-color: $mainColor;
-      width: 100%;
-      font-weight: 600 !important;
-      padding: 1% 10% !important;
-      border-radius: 50px;
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  #storage {
-    .side-side__ {
-      display: flex;
-      flex-wrap: wrap;
-      width: 90% !important;
-      gap: 0% !important;
       .side-one {
         order: 2;
-        flex-basis: 100%;
-        margin-top: 0px !important;
+        width: 100%;
         .paragraph-box {
-          width: 100% !important;
-
+          gap: 5px;
+          p {
+            font-weight: bold !important;
+            color: #fff;
+            text-align: left;
+          }
           li {
+            color: #fff;
+            font-size: 17px;
             text-align: left;
           }
         }
       }
       .side-two {
         order: 1;
-        flex-basis: 100%;
-        img {
+        width: 70%;
+        justify-self: center;
+      }
+    }
+  }
+
+  #links {
+    padding-bottom: 0px;
+    .heading {
+      width: 90%;
+      h1 {
+        color: $mainColor;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    .yellow {
+      width: 90%;
+      .yellow-background {
+        background-color: $mainColor;
+        width: 100%;
+        font-weight: 600 !important;
+        padding: 1% 0;
+        border-radius: 50px;
+        a {
+          text-decoration: none;
+          color: $darkBackground;
+        }
+      }
+    }
+    .inner-box {
+      width: 90%;
+      .paragraph-box {
+        background-color: $altBAckground;
+      }
+      .double-img__ {
+        align-items: center;
+      }
+    }
+
+    .sectionTwo {
+      background-color: $secondColor;
+      padding: 50px 0;
+      margin-bottom: -50px;
+      .inner-div_ {
+        width: 90%;
+        p {
+          font-weight: bold !important;
+          color: #fff;
+        }
+        .link {
+          font-weight: 400 !important;
+          color: rgba(255, 255, 255, 0.945);
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+        a {
           width: 50%;
         }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 30px 0;
+    background-color: $altBAckground;
+    .inner-div_ {
+      width: 90%;
+      p {
+        text-align: center;
+        font-style: italic;
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .bodyArea {
+    #welcome {
+      padding-bottom: 50px;
+      .three-in-one__ {
+        gap: 50px;
+        .inner-div_ {
+          width: 90%;
+          gap: 20px;
+        }
+      }
+    }
+
+    #consideration {
+      gap: 50px;
+      .inner-div_ {
+        width: 80%;
+        p {
+          padding-bottom: 25px;
+        }
+        .double-img__ {
+          width: 90%;
+          gap: 100px;
+        }
+      }
+
+      .potential-risk {
+        margin-bottom: -50px;
+        // display: grid;
+        // background-color: $altBAckground;
+        // padding: 70px 0;
+        .three-in-one__ {
+          gap: 50px;
+          // width: 100%;
+          // justify-self: center;
+          // h1 {
+          //   color: $mainColor;
+          // }
+          .inner-div_ {
+            // justify-items: center;
+            gap: 25px;
+            .paragraph-box {
+              width: 100%;
+              // p {
+              //   font-weight: bold !important;
+              //   text-align: center;
+              // }
+            }
+          }
+        }
+      }
+    }
+
+    #guidance {
+      gap: 50px;
+    }
+
+    #talking {
+      .three-in-one__ {
+        gap: 50px;
+        .inner-div_ {
+          gap: 100px;
+          .paragraph-box {
+            width: 90%;
+            padding: 5%;
+          }
+          .side-side__ {
+            gap: 2%;
+            .side-one {
+              margin-top: 0px;
+              align-self: center;
+              .paragraph-box {
+                width: 90%;
+                padding: 5% 5% 5% 10%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #usage {
+      .three-in-one__ {
+        gap: 50px;
+        .inner-div_ {
+          gap: 40px;
+        }
+      }
+    }
+
+    #storage {
+      gap: 100px;
+      padding-bottom: 0px;
+      .side-side__ {
+        width: 90%;
+        grid-template-columns: 2fr 3fr;
+        gap: 20px;
+        .side-one {
+          .paragraph-box {
+            width: 100%;
+            gap: 15px;
+          }
+        }
+      }
+    }
+
+    #links {
+      .yellow {
+        width: 60%;
+      }
+      .inner-box {
+        .paragraph-box {
+          height: 100px;
+          padding: 0 50px;
+          align-items: center;
+        }
+      }
+
+      .sectionTwo {
+        .inner-div_ {
+          a {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .bodyArea {
+    #welcome {
+      padding-bottom: 50px;
+      .three-in-one__ {
+        width: 60%;
+        .inner-div_ {
+          width: 80%;
+        }
+      }
+    }
+
+    #consideration {
+      gap: 50px;
+      h1 {
+        width: 60%;
+      }
+      .inner-div_ {
+        width: 55%;
+        .double-img__ {
+          width: 80%;
+        }
+      }
+
+      .potential-risk {
+        .three-in-one__ {
+          gap: 50px;
+          .inner-div_ {
+            gap: 40px;
+            .paragraph-box {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    #guidance {
+      h1 {
+        width: 65%;
+      }
+      .double-img__ {
+        width: 60%;
+      }
+      .paragraph-box {
+        width: 40%;
+        padding: 2% 0;
+      }
+    }
+
+    #talking {
+      .three-in-one__ {
+        gap: 50px;
+        width: 60%;
+        .inner-div_ {
+          gap: 100px;
+          .paragraph-box {
+            width: 70%;
+            padding: 5% 15%;
+            border-radius: 400px;
+          }
+          .side-side__ {
+            gap: 5%;
+            .side-one {
+              align-self: flex-start;
+              margin-top: 150px;
+              .paragraph-box {
+                width: auto;
+                padding: 4% 15%;
+              }
+            }
+            .side-two {
+              width: 100%;
+              justify-self: center;
+            }
+          }
+        }
+      }
+    }
+
+    #usage {
+      .three-in-one__ {
+        width: 60%;
+        .inner-div_ {
+          .paragraph-box {
+            width: 60%;
+            gap: 25px;
+          }
+        }
+      }
+    }
+
+    #storage {
+      padding-bottom: 0px;
+      h1 {
+        width: 60%;
+      }
+      .side-side__ {
+        width: 60%;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+      }
+    }
+
+    #links {
+      .heading {
+        width: 60%;
+      }
+      .yellow {
+        width: 30%;
+        .yellow-background {
+          text-align: center;
+        }
+      }
+      .inner-box {
+        width: 45%;
+        .paragraph-box {
+          width: 100%;
+          height: 100px;
+          padding: 2% 0px;
+          p {
+            text-align: center;
+            width: 85%;
+            display: grid;
+            justify-self: center;
+          }
+        }
+        .double-img__ {
+          width: 80%;
+        }
+      }
+
+      .sectionTwo {
+        .inner-div_ {
+          width: 50%;
+          p {
+            text-align: center;
+          }
+          a {
+            width: 30%;
+          }
+        }
+      }
+    }
+
+    .footer {
+      .inner-div_ {
+        width: 60%;
       }
     }
   }
