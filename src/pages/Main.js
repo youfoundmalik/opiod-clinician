@@ -152,7 +152,7 @@ const Main = () => {
   ];
 
   return (
-    <>
+    <div className="body">
       <Nav />
       <div className="bodyArea">
         <Section id="welcome">
@@ -296,7 +296,7 @@ const Main = () => {
           </InnerDiv>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
