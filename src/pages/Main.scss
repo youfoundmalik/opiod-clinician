@@ -80,7 +80,8 @@ b {
         .inner-div_ {
           justify-items: center;
           gap: 15px;
-          .paragraph-box {
+          .PR-Points {
+            width: 100%;
             p {
               font-weight: bold !important;
               text-align: center;
@@ -321,25 +322,12 @@ b {
 
       .potential-risk {
         margin-bottom: -50px;
-        // display: grid;
-        // background-color: $altBAckground;
-        // padding: 70px 0;
         .three-in-one__ {
           gap: 50px;
-          // width: 100%;
-          // justify-self: center;
-          // h1 {
-          //   color: $mainColor;
-          // }
           .inner-div_ {
-            // justify-items: center;
             gap: 25px;
-            .paragraph-box {
-              width: 100%;
-              // p {
-              //   font-weight: bold !important;
-              //   text-align: center;
-              // }
+            .PR-Points{
+              width: 95%;
             }
           }
         }
@@ -451,9 +439,6 @@ b {
           gap: 50px;
           .inner-div_ {
             gap: 40px;
-            .paragraph-box {
-              width: 100%;
-            }
           }
         }
       }

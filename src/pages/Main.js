@@ -179,10 +179,10 @@ const Main = () => {
           </InnerDiv>
           <div className="potential-risk">
             <ThreeInOne {...potentialRisk[0]}>
-              <ParagraphBox>
+              <div className="PR-Points">
                 <p>{potentialRisk[1].message}</p>
                 <p>{potentialRisk[1].other}</p>
-              </ParagraphBox>
+              </div>
             </ThreeInOne>
           </div>
         </Section>
