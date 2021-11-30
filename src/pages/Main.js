@@ -112,6 +112,7 @@ const Main = () => {
     },
     {
       text1: "ARCHE Systematic Review",
+      link1: "https://doi.org/10.1542/peds.2021-051927",
       link2:
         "https://trekk.ca/resources?utf8=%E2%9C%93&tag_id=D010147&external_resource_type=Quick_glance",
       text2: "TREKK Bottom Line Recommendations",
@@ -242,7 +243,11 @@ const Main = () => {
             <p>{footer[0].subheading}</p>
           </InnerDiv>
           <InnerDiv altclass="yellow">
-            <p className="yellow-background">{footer[1].text1}</p>
+          <p className="yellow-background">
+              <a target="_blank" rel="noreferrer" href={footer[1].link1}>
+                {footer[1].text1}
+              </a>
+            </p>
             <p className="yellow-background">
               <a target="_blank" rel="noreferrer" href={footer[1].link2}>
                 {footer[1].text2}
